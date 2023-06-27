@@ -7,7 +7,7 @@ from email.message import EmailMessage
 # set your email and password
 # please use App Password
 email_address = "portelinhapt@gmail.com"
-email_password = "hkovungrykrmtmwq"
+email_password = "Inserir APP Password" # https://support.google.com/accounts/answer/185833
 
 # create email
 msg = EmailMessage()
