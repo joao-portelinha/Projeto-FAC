@@ -4,4 +4,11 @@
     - [ ] Cada série é visualizada através do matplotlib.
     - [ ] Dados gravados em ficheiro JSON que contem os campos para cada sensor e as grandezas calculadas.
     - [ ] Opção de enviar o ficheiro via email.
-- [ ] Localmente apresentar numa página web os dados dos dois nanos -> crição de gráficos em **Javascript**. (usar github pages maybe)
+- [ ] Localmente apresentar numa página web os dados dos dois nanos -> crição de gráficos em **Javascript**. (usar github pages maybe)  
+
+## Sensores
+- [ ] IMU for Motion Detection. (?)
+- [ ] Proximity and Gesture Detection.
+- [ ] Barometric Pressure Sensor.
+- [ ] Temperature and Humidity Sensor.
+
