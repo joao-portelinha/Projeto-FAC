@@ -18,12 +18,10 @@
 - [ ] Proximity and Gesture Detection. [[Library](https://www.arduino.cc/reference/en/libraries/arduino_apds9960/) | [Documentation](https://docs.arduino.cc/tutorials/nano-33-ble-sense/gesture-sensor)]
     - [ ] Gestures.
     - [ ] Color.
-    - [ ] Proximity.
+    - [x] Proximity.
 - [ ] Barometric Pressure Sensor. [[Library](https://www.arduino.cc/reference/en/libraries/arduino_lps22hb/) | [Documentation](https://docs.arduino.cc/tutorials/nano-33-ble-sense/barometric-sensor)]
-    - [ ] Absolute pressure range: 260 to 1260 hPa.
+    - [x] Pressure.
 - [ ] Temperature and Humidity Sensor. [[Library](https://www.arduino.cc/reference/en/libraries/arduino_hts221/) | [Documentation](https://docs.arduino.cc/tutorials/nano-33-ble-sense/humidity-and-temperature-sensor)]
-    - [ ] Humidity accuracy: ± 3.5% rH, 20 to +80% rH.
-    - [ ] Humidity range: 0 to 100%.
-    - [ ] Temperature accuracy: ± 0.5 °C, 15 to +40 °C.
-    - [ ] Temperature range: -40 to 120° C.
+    - [x] Humidity.
+    - [X] Temperature.
 
