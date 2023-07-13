@@ -72,3 +72,27 @@ plt.xlabel("Tempo")
 plt.ylabel("Temperatura °C")
 plt.plot(temp_data)
 plt.show()
+
+# Grafico da humidade
+plt.title('Humidade Relativa (%)')
+plt.xlabel("Tempo")
+plt.ylabel("HR (%)")
+plt.plot(hr_data)
+plt.show()
+
+# Grafico da Pressão Atmosferica
+plt.title('Pressão Atmosférica - (hPa) ')
+plt.xlabel("Tempo")
+plt.ylabel("Pressão Atmosférica - (hPa) ")
+plt.plot(p_data)
+plt.show()
+
+# Grafico de Proximidade
+plt.title('Proximidade (255 -> Longe, 0 -> Perto)')
+plt.xlabel("Tempo")
+plt.ylabel("Proximidade")
+plt.plot(prox_data)
+plt.show()
+
+# Grafico de Aceleração
+# TODO
