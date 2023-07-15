@@ -3,6 +3,8 @@ import os
 import time
 import serial
 import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+import numpy as np
 import subprocess
 
 print('Portas COM disponível:')
@@ -53,8 +55,11 @@ hr_data = []
 p_data  = []
 prox_data = []
 acc_data = []
+x_acc = []
+y_acc = []
+z_acc = []
 
-data = data[1:]
+data = data[1:] # Skip primeira linha
 
 for line in data:
     temp, hr, p, prox, acc = line.split()
@@ -62,37 +67,58 @@ for line in data:
     hr_data.append(float(hr))
     p_data.append(float(p))
     prox_data.append(float(prox))
-    #acc_data.append(float(acc))
+    acc_data.append(acc)
+    acc_string = acc.split(",")
+    x_acc.append(float(acc_string[0]))
+    y_acc.append(float(acc_string[1]))
+    z_acc.append(float(acc_string[2]))
 
 print("Dados lidos com sucesso!")
 
+# Initialise the subplot function using number of rows and columns
+figure, axis = plt.subplots(2, 2)
+  
 # Grafico da temperatura
-plt.title('Temperatura (°C)')
-plt.xlabel("Tempo")
-plt.ylabel("Temperatura °C")
-plt.plot(temp_data)
-plt.show()
+axis[0, 0].set_title("Temperatura (°C)")
+axis[0, 0].set_xlabel("Tempo")
+axis[0, 0].set_ylabel("Temperatura (°C)")
+axis[0, 0].plot(temp_data)
 
 # Grafico da humidade
-plt.title('Humidade Relativa (%)')
-plt.xlabel("Tempo")
-plt.ylabel("HR (%)")
-plt.plot(hr_data)
-plt.show()
+axis[0, 1].set_title("Humidade Relativa (%)")
+axis[0, 1].set_xlabel("Tempo")
+axis[0, 1].set_ylabel("HR (%)")
+axis[0, 1].plot(hr_data)
 
 # Grafico da Pressão Atmosferica
-plt.title('Pressão Atmosférica - (hPa) ')
-plt.xlabel("Tempo")
-plt.ylabel("Pressão Atmosférica - (hPa) ")
-plt.plot(p_data)
-plt.show()
+axis[1, 0].set_title("Pressão Atmosférica - (hPa)")
+axis[1, 0].set_xlabel("Tempo")
+axis[1, 0].set_ylabel("Pressão Atmosférica - (hPa)")
+axis[1, 0].plot(p_data)
 
 # Grafico de Proximidade
-plt.title('Proximidade (255 -> Longe, 0 -> Perto)')
-plt.xlabel("Tempo")
-plt.ylabel("Proximidade")
-plt.plot(prox_data)
+axis[1, 1].set_title("Proximidade (255 -> Longe, 0 -> Perto)")
+axis[1, 1].set_xlabel("Tempo")
+axis[1, 1].set_ylabel("Proximidade")
+axis[1, 1].plot(prox_data)
+
+maximize = plt.get_current_fig_manager()
+maximize.window.state('zoomed')
 plt.show()
 
 # Grafico de Aceleração
-# TODO
+plt.figure()
+plt.subplot(3, 1, 1)
+plt.plot(x_acc)
+plt.title('Aceleração (G)')
+plt.ylabel('Aceleracao em X')
+
+plt.subplot(3, 1, 2)
+plt.plot(y_acc)
+plt.xlabel('Tempo (s)')
+plt.ylabel('Acelearacao em Y')
+
+plt.subplot(3, 1, 3)
+plt.plot(z_acc)
+plt.xlabel('Tempo (s)')
+plt.ylabel('Acelearacao em Z')
