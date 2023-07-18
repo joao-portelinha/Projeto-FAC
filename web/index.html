@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css.css">
+    <title>FAC</title>
+</head>
+<body>
+    <div class="div_center">
+        <label for="myfile">Select a file:</label><br>
+        <input type="file" id="myfile" name="myfile" accept=".json">
+    </div>
+    <br>
+    <div class="div_center" id="print_json"></div>
+
+    <script type="module" src="app.js"></script>
+
+    <script>
+        fetch("data.json")
+            .then(response => response.json())
+            .then(data =>{
+                console.log(data)
+
+                document.querySelector("#print_json").innerText = data.countries[0].name
+            })
+
+            
+    </script>
+
+</body>
+</html>
