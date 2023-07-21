@@ -3,6 +3,7 @@
 #include <Arduino_APDS9960.h>
 #include <Arduino_LSM9DS1.h>
 
+
 int proximity;
 float x, y, z;
 
@@ -35,13 +36,16 @@ void setup() {
   Serial.print("Proximidade");
   Serial.print(" ");
   Serial.print("Aceleração(G)");
-  Serial.println("");
-  
+  Serial.print(" ");
+  Serial.print("Temperatura Efetiva");
+  Serial.print(" ");
+  Serial.print("Temperatura na Pele");
+  Serial.println(""); 
 }
 
 void loop() {
    // read all the sensor values
-  float temperature = HTS.readTemperature() - 5; //Arduino_HTS221 - Temperatura
+  float temperature = HTS.readTemperature(); //Arduino_HTS221 - Temperatura
   float humidity    = HTS.readHumidity();        //Arduino_HTS221 - Humidade
   float pressure = BARO.readPressure();          //Arduino_LPS22HB - Pressão Atmosferica
   if (APDS.proximityAvailable()) {
@@ -65,7 +69,10 @@ void loop() {
   Serial.print(y);
   Serial.print(",");
   Serial.print(z);
+  Serial.print(" ");
+  Serial.print(temperature - 0.4 * (temperature - 10) * (1 - humidity/100));
+  Serial.print(" ");
+  Serial.print(temperature + (1/7 * 1/2 * 40) + (40 - 15 + (120 * 1) * (1 - 0.7)) / (2 + 9 * pow((0.1 + 6.9), 1/2)));
   // print an empty line
   Serial.println();
-
 }
