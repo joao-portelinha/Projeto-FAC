@@ -13,19 +13,14 @@
     <br>
     <div class="div_center" id="print_json"></div>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="module" src="app.js"></script>
 
-    <script>
-        fetch("data.json")
-            .then(response => response.json())
-            .then(data =>{
-                console.log(data)
 
-                document.querySelector("#print_json").innerText = data.countries[0].name
-            })
-
-            
-    </script>
-
+    <div class="small">
+        <br><br>
+        <canvas id="myChart"></canvas>
+    </div>
+       
 </body>
 </html>
