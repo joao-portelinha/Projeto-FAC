@@ -20,28 +20,55 @@
     
     
     <div class="slideshow-container">
+      
 
-        <div class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
-          <img src="https://media.tenor.com/RD2MyB35STQAAAAC/xqc-el-goblino.gif" style="width:100%">
-        </div>
-        
-        <div class="mySlides fade">
-          <div class="numbertext">2 / 3 - Temperatura</div>
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 5 - Humidade</div>
         <div class="small">
-            <canvas id="myChart"></canvas>
+          <canvas id="hum_chart"></canvas>
         </div>
+      </div>
+        
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 5 - Temperatura</div>
+        <div class="small">
+          <canvas id="temp_chart"></canvas>
+        </div>
+      </div>
 
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 5 - Pressão</div>
+        <div class="small">
+          <canvas id="pressure_chart"></canvas>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 5 - Temperatura Efetiva</div>
+        <div class="small">
+          <canvas id="temp_efect_chart"></canvas>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 5 - Temperatura na Pele</div>
+        <div class="small">
+          <canvas id="temp_skin_chart"></canvas>
+        </div>
+      </div>
+
+
+    </div>
         <a class="prev" onclick="plusSlides(-1)">❮</a>
         <a class="next" onclick="plusSlides(1)">❯</a>
         
         </div>
         <br>
         
-        <div style="text-align:center">
+        <!--<div style="text-align:center">
           <span class="dot" onclick="currentSlide(1)"></span> 
           <span class="dot" onclick="currentSlide(2)"></span> 
-        </div>
+        </div>-->
        
         <script src="slider.js"></script>
 
