@@ -6,21 +6,52 @@
     <title>FAC</title>
 </head>
 <body>
-    <div class="div_center">
-        <label for="myfile">Select a file:</label><br>
-        <input type="file" id="myfile" name="myfile" accept=".json">
-    </div>
-    <br>
-    <div class="div_center" id="print_json"></div>
+  <!--<section class="wrapper">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+  </section>-->
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="module" src="app.js"></script>
 
+    <div class="row">
+      <div class="column">
+        <div class="container">
+          <div id="arrow_left" class="key" type="button">
+            <span class="text">◄</span>
+            <div class="angle-shadow left-top top-section"></div>
+            <div class="angle-shadow right-top top-section"></div>
+            <div class="angle-shadow left-bottom bottom-section"></div>
+            <div class="angle-shadow right-bottom bottom-section"></div>
+          </div>
+          <p>Anterior</p>
+        </div>
+      </div>
 
+      <div class="column">
+        <h2>Projeto Física Aplicada à Computação</h2>
+        <p>Elaborado Por:</p>
+        <p>Fábio Gonçalves nº17646</p>
+        <p>João Portelinha nº17646</p>
+      </div>
+      <div class="column">
+        <div class="container">
+          <div id="arrow_right" class="key" type="button">
+            <span class="text">►</span>
+            <div class="angle-shadow left-top top-section"></div>
+            <div class="angle-shadow right-top top-section"></div>
+            <div class="angle-shadow left-bottom bottom-section"></div>
+            <div class="angle-shadow right-bottom bottom-section"></div>
+          </div>
+          <p>Próximo</p>
+        </div>
+      </div>
+    </div>
     
     
+    <div class="row">
     <div class="slideshow-container">
-      
 
       <div class="mySlides fade">
         <div class="numbertext">1 / 5 - Humidade</div>
@@ -59,17 +90,7 @@
 
 
     </div>
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
-        
-        </div>
-        <br>
-        
-        <!--<div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span> 
-          <span class="dot" onclick="currentSlide(2)"></span> 
-        </div>-->
-       
+  </div>
         <script src="slider.js"></script>
 
 </body>
