@@ -36,6 +36,12 @@ Promise.all([
         }]
       },
       options: {
+        title: {
+          display: true,
+          text: 'Temperatura',
+          fontSize: 25,
+          fontColor: '#ff7f00'
+        },
         tension: 0.6,
         scales: {
           x: {
@@ -198,3 +204,4 @@ Promise.all([
     });
 
 })
+

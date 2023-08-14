@@ -37,3 +37,30 @@ document.getElementById('arrow_left').addEventListener('click', function (e) {
 document.getElementById('arrow_right').addEventListener('click', function (e) {
   plusSlides(1);
 });
+
+
+function fileValidationLocal() {
+  var fileInput = document.getElementById('local');
+  var filePath = fileInput.value;
+
+  var allowedExtensions = /(\.JSON)$/i;
+   
+  if (!allowedExtensions.exec(filePath)) {
+      alert('O ficheiro selecionado não é .JSON');
+      fileInput.value = '';
+      return false;
+  } 
+}
+
+function fileValidationRemote() {
+  var fileInput = document.getElementById('remote');
+  var filePath = fileInput.value;
+
+  var allowedExtensions = /(\.JSON)$/i;
+   
+  if (!allowedExtensions.exec(filePath)) {
+      alert('O ficheiro selecionado não é .JSON');
+      fileInput.value = '';
+      return false;
+  }
+}
