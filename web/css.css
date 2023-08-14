@@ -12,8 +12,25 @@ button{
   border-radius: 12px;
 }
 
+h3{
+  padding: 0;
+  font-size: 20px;
+  color: white;
+}
+
+form{
+  padding: 10px;
+  outline: 8px ridge white;
+  border-radius: 2rem;
+}
+
 input{
   color: white;
+}
+
+label{
+  color: white;
+  font-size: 15px;
 }
 
 .div_center{

@@ -46,7 +46,7 @@ function fileValidationLocal() {
   var allowedExtensions = /(\.JSON)$/i;
    
   if (!allowedExtensions.exec(filePath)) {
-      alert('O ficheiro selecionado não é .JSON');
+      alert('Selecione um ficheiro em formato JSON.');
       fileInput.value = '';
       return false;
   } 
@@ -59,7 +59,7 @@ function fileValidationRemote() {
   var allowedExtensions = /(\.JSON)$/i;
    
   if (!allowedExtensions.exec(filePath)) {
-      alert('O ficheiro selecionado não é .JSON');
+      alert('Selecione um ficheiro em formato JSON.');
       fileInput.value = '';
       return false;
   }

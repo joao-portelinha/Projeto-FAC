@@ -25,15 +25,17 @@
       </div>
 
       <div class="column">
-        <h2>Projeto Física Aplicada à Computação</h2>
-        <p>Elaborado Por:</p>
-        <p>Fábio Gonçalves nº17646</p>
-        <p>João Portelinha nº20481</p>
+        <!--<h2>Projeto Física Aplicada à Computação</h2>
+        <p><b>Desenvolvido Por:</b> Fábio Gonçalves nº17646 e João Portelinha nº20481</p>
+        <p><b>UC:</b> Física Aplicada à Computação<b> Docente:</b> Nuno Pereira</p>-->
 
         <br>
         <form action="/action_page.php">
+          <h3>Selecionar ficheiros de dados .JSON</h1>
+          <label for="local">(Local)</label>
           <input type="file" id="local" name="filename" accept=".JSON" onchange="return fileValidationLocal()">
           <br>
+          <label for="remote">(Remote)</label>
           <input type="file" id="remote" name="filename" accept=".JSON"  onchange="return fileValidationRemote()">
 
           <br><br>
