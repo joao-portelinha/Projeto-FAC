@@ -1,5 +1,5 @@
 
-Promise.all([
+/*Promise.all([
   fetch("output.json").then(data => data.json()),
   fetch("output_remote.json").then(data => data.json())])
   .then(data =>{
@@ -204,4 +204,4 @@ Promise.all([
     });
 
 })
-
+*/

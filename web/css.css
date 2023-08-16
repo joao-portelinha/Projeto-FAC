@@ -18,7 +18,7 @@ h3{
   color: white;
 }
 
-form{
+.outline{
   padding: 10px;
   outline: 8px ridge white;
   border-radius: 2rem;
@@ -115,7 +115,7 @@ img {vertical-align: middle;}
   margin-left: auto;
   margin-right: auto;
   display: block;
-  width: 90%;
+  width: 100%;
 }
 
 
@@ -141,8 +141,8 @@ img {vertical-align: middle;}
   z-index: 50;
   display: flex;
   justify-content: center;
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   overflow: hidden;
   background-color: #b7ad9b;
   border: 1rem solid #857e71;
@@ -183,7 +183,6 @@ img {vertical-align: middle;}
 
 .key .text {
   position: relative;
-  top: 2rem;
   z-index: 100;
   display: flex;
   justify-content: center;
@@ -194,7 +193,7 @@ img {vertical-align: middle;}
   font-family: Arial, Helvetica, sans-serif;
   color: #1b2735;
   background-color: #eee0ce;
-  border: 1rem solid #f6e5d6;
+  border: 1.5rem solid #f6e5d6;
   border-radius: 3rem;
   box-shadow: 
     0 -10rem 10rem 3rem #f6e5d6,
