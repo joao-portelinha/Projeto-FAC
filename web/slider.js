@@ -115,7 +115,8 @@ document.getElementById('import').onclick = function() {
   new Chart(temp_chart, {
     type: 'line',
     data: {
-      labels: Array.from({ length: obj_local.temperatura.length }, (_, i) => `Temperatura ${i + 1}`),
+      labels: obj_local.tempo,
+      //labels: Array.from({ length: obj_local.temperatura.length }, (_, i) => `Temperatura ${i + 1}`),
       datasets: [{
         label: 'Local',
         data: obj_local.temperatura,
@@ -141,8 +142,12 @@ document.getElementById('import').onclick = function() {
       tension: 0.6,
       scales: {
         x: {
-          display: false 
-      },
+          display: true,
+          title: {
+            display: true,
+            text: 'Tempo',
+          }
+        },
         y: {
           display: true,
           title: {
@@ -173,7 +178,8 @@ document.getElementById('import').onclick = function() {
   new Chart(hum_chart, {
     type: 'line',
     data: {
-      labels: Array.from({ length: obj_local.humidade.length }, (_, i) => `Humidade ${i + 1}`),
+      labels: obj_local.tempo,
+      //labels: Array.from({ length: obj_local.humidade.length }, (_, i) => `Humidade ${i + 1}`),
       datasets: [{
         label: 'Local',
         data: obj_local.humidade,
@@ -193,7 +199,10 @@ document.getElementById('import').onclick = function() {
       tension: 0.6,
       scales: {
         x: {
-          display: false 
+          title: {
+            display: true,
+            text: 'Tempo'
+          }
       },
         y: {
           display: true,
@@ -209,7 +218,8 @@ document.getElementById('import').onclick = function() {
   new Chart(pressure_chart, {
     type: 'line',
     data: {
-      labels: Array.from({ length: obj_local.pressao.length }, (_, i) => `Pressão ${i + 1}`),
+      labels: obj_local.tempo,
+      //labels: Array.from({ length: obj_local.pressao.length }, (_, i) => `Pressão ${i + 1}`),
       datasets: [{
         label: 'Local',
         data: obj_local.pressao,
@@ -229,7 +239,10 @@ document.getElementById('import').onclick = function() {
       tension: 0.6,
       scales: {
         x: {
-          display: false 
+          title: {
+            display: true,
+            text: 'Tempo'
+          }
       },
         y: {
           display: true,
@@ -245,7 +258,8 @@ document.getElementById('import').onclick = function() {
   new Chart(temp_efect_chart, {
     type: 'line',
     data: {
-      labels: Array.from({ length: obj_local.temperatura_efetiva.length }, (_, i) => `Temperatura Efetiva ${i + 1}`),
+      labels: obj_local.tempo,
+      //labels: Array.from({ length: obj_local.temperatura_efetiva.length }, (_, i) => `Temperatura Efetiva ${i + 1}`),
       datasets: [{
         label: 'Local',
         data: obj_local.temperatura_efetiva,
@@ -265,7 +279,10 @@ document.getElementById('import').onclick = function() {
       tension: 0.6,
       scales: {
         x: {
-          display: false 
+          title: {
+            display: true,
+            text: 'Tempo'
+          }
       },
         y: {
           display: true,
@@ -281,7 +298,8 @@ document.getElementById('import').onclick = function() {
   new Chart(temp_skin_chart, {
     type: 'line',
     data: {
-      labels: Array.from({ length: obj_local.temperatura_na_pele.length }, (_, i) => `Temperatura na Pele ${i + 1}`),
+      labels: obj_local.tempo,
+      //labels: Array.from({ length: obj_local.temperatura_na_pele.length }, (_, i) => `Temperatura na Pele ${i + 1}`),
       datasets: [{
         label: 'Local',
         data: obj_local.temperatura_na_pele,
@@ -301,7 +319,10 @@ document.getElementById('import').onclick = function() {
       tension: 0.6,
       scales: {
         x: {
-          display: false 
+          title: {
+            display: true,
+            text: 'Tempo'
+          }
       },
         y: {
           display: true,
