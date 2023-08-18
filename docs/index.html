@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css.css">
+    <title>FAC - Projeto Final</title>
+</head>
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="app.js"></script>
+
+    <div class="row">
+      <div class="column">
+        <div class="container">
+          <div id="arrow_left" class="key" type="button">
+            <span class="text">◄</span>
+            <div class="angle-shadow left-top top-section"></div>
+            <div class="angle-shadow right-top top-section"></div>
+            <div class="angle-shadow left-bottom bottom-section"></div>
+            <div class="angle-shadow right-bottom bottom-section"></div>
+          </div>
+          <p id="prev">Anterior</p>
+        </div>
+      </div>
+
+      <div class="column">
+        <!--<h2>Projeto Física Aplicada à Computação</h2>
+        <p><b>Desenvolvido Por:</b> Fábio Gonçalves nº17646 e João Portelinha nº20481</p>
+        <p><b>UC:</b> Física Aplicada à Computação<b> Docente:</b> Nuno Pereira</p>-->
+
+        <br>
+
+        <div class="outline">
+          <h3>Selecionar ficheiros de dados .JSON</h1>
+          <label for="local">(Local)</label>
+          <input type="file" id="local" name="filename" accept=".JSON" onchange="return fileValidationLocal()">
+          <br>
+          <label for="remote">(Remote)</label>
+          <input type="file" id="remote" name="filename" accept=".JSON"  onchange="return fileValidationRemote()">
+
+          <br><br>
+          <button type="submit" id="import">Desenhar Gráficos</button>
+        </div>
+        
+      </div>
+ 
+      <div class="column">
+        <div class="container">
+          <div id="arrow_right" class="key" type="button">
+            <span class="text">►</span>
+            <div class="angle-shadow left-top top-section"></div>
+            <div class="angle-shadow right-top top-section"></div>
+            <div class="angle-shadow left-bottom bottom-section"></div>
+            <div class="angle-shadow right-bottom bottom-section"></div>
+          </div>
+          <p id="next">Próximo</p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="row">
+      <div class="column2">
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div id="initialText" class="numbertext"><b></b></div>
+        <div id="hideNr" class="numbertext2"></div>
+        <div class="small">
+          <canvas id="hum_chart"></canvas>
+        </div>
+      </div>
+        
+      <div class="mySlides fade">
+        <div class="numbertext"><b>Temperatura</b></div>
+        <div class="numbertext2">(2/5)</div>
+        <div class="small">
+          <canvas id="temp_chart"></canvas>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"><b>Pressão</b></div>
+        <div class="numbertext2">(3/5)</div>
+        <div class="small">
+          <canvas id="pressure_chart"></canvas>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"><b>Temperatura Efetiva</b></div>
+        <div class="numbertext2">(4/5)</div>
+        <div class="small">
+          <canvas id="temp_efect_chart"></canvas>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"><b>Temperatura na Pele</b></div>
+        <div class="numbertext2">(5/5)</div>
+        <div class="small">
+          <canvas id="temp_skin_chart"></canvas>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  </div>
+        <script src="slider.js"></script>
+
+</body>
+</html>
