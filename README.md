@@ -1,4 +1,5 @@
 # TODO  
+https://joao-portelinha.github.io/Projeto-FAC/
 - [x] Gerar dados de todos os sensores do Arduino. (**C**)
 - [x] Programa para calcular médias, desvios padrão, max e min. (**Python**)
     - [x] Cada série é visualizada através do matplotlib.
