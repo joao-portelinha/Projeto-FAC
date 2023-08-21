@@ -32,15 +32,17 @@
         <br>
 
         <div class="outline">
-          <h3>Selecionar ficheiros de dados .JSON</h1>
-          <label for="local">(Local)</label>
+          <h3 id="refazer">Desenhar gráficos com outros ficheiros .JSON?</h3>
+          <button type="submit" id="refresh">Refresh</button>
+          <h3 id="select_files">Selecionar ficheiros de dados .JSON</h3>
+          <label id="lbl_local" for="local">(Local)</label>
           <input type="file" id="local" name="filename" accept=".JSON" onchange="return fileValidationLocal()">
           <br>
-          <label for="remote">(Remote)</label>
+          <label id="lbl_remote" for="remote">(Remote)</label>
           <input type="file" id="remote" name="filename" accept=".JSON"  onchange="return fileValidationRemote()">
 
           <br><br>
-          <button type="submit" id="import">Desenhar Gráficos</button>
+          <button type="submit" id="import_btn">Desenhar Gráficos</button>
         </div>
         
       </div>

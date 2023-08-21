@@ -22,6 +22,8 @@ function showSlides(n) {
 }
 
 
+
+
 document.getElementById('arrow_left').addEventListener('click', function (e) {
   plusSlides(-1);
 });
@@ -57,18 +59,21 @@ function fileValidationRemote() {
   }
 }
 
-
   var obj_local;
   var obj_remote;
   var arrow_left = document.getElementById('arrow_left');
   var arrow_right = document.getElementById('arrow_right');
   var next = document.getElementById('next');
   var prev = document.getElementById('prev');
+  var refazer = document.getElementById('refazer');
+  var refresh = document.getElementById('refresh');
 
   arrow_left.style.display = 'none';
   arrow_right.style.display = 'none';
   next.style.display = 'none';
   prev.style.display = 'none';
+  refazer.style.display = 'none';
+  refresh.style.display = 'none';
     
   /* LOCAL */
 
@@ -102,7 +107,7 @@ function onReaderLoad2(event2){
 document.getElementById('remote').addEventListener('change', onChange2);
 
 
-document.getElementById('import').onclick = function() {
+document.getElementById('import_btn').onclick = function() {
 
   const temp_chart = document.getElementById('temp_chart');
   const hum_chart = document.getElementById('hum_chart');
@@ -159,10 +164,13 @@ document.getElementById('import').onclick = function() {
     }
   });
   
+
   document.getElementById("initialText").innerHTML = "Humidade";
   document.getElementById("hideNr").innerHTML = "(1/5)";
   arrow_left.style.display = 'block';
+  arrow_left.style = 'column';
   arrow_right.style.display = 'block';
+  arrow_right.style = 'column';
   next.style.display = 'block';
   prev.style.display = 'block';
 
@@ -334,6 +342,31 @@ document.getElementById('import').onclick = function() {
       }
     }
   });
+
+  var select_files = document.getElementById('select_files');
+  var lbl_local = document.getElementById('lbl_local');
+  var lbl_remote = document.getElementById('lbl_remote');
+  var local = document.getElementById('local');
+  var remote = document.getElementById('remote');
+  var import_btn = document.getElementById('import_btn');
+  select_files.style.display = 'none';
+  lbl_local.style.display = 'none';
+  lbl_remote.style.display = 'none';
+  local.style.display = 'none';
+  remote.style.display = 'none';
+  import_btn.style.display = 'none';
+
+  
+  refazer.style.display = 'block';
+  refresh.style.display = 'block';
+  refresh.style = 'column';
+
+
+  document.getElementById('refresh').addEventListener('click', function (e) {
+    location.reload();
+  });
+
+
 } catch {
   alert("Selecione os dois ficheiros JSON.")
 }
