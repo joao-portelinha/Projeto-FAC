@@ -10,6 +10,11 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="module" src="app.js"></script>
 
+    <form action="welcome_get.php" id="upload_form" class="hidden">
+      <input type="file" id="upload_file" name="upload_file" accept=".JSON">
+      <button type="submit" id="upload_file_btn">Upload</button>
+      </form>
+
     <div class="row">
       <div class="column">
         <div class="container">
@@ -30,10 +35,11 @@
         <p><b>UC:</b> Física Aplicada à Computação<b> Docente:</b> Nuno Pereira</p>-->
 
         <br>
+          
 
         <div class="outline">
           <h3 id="refazer">Desenhar gráficos com outros ficheiros .JSON?</h3>
-          <button type="submit" id="refresh">Refresh</button>
+          <button type="submit" id="refresh" onclick="window.location.href='https://joao-portelinha.github.io/Projeto-FAC/';">Refresh</button>
           <h3 id="select_files">Selecionar ficheiros de dados .JSON</h3>
           <label id="lbl_local" for="local">(Local)</label>
           <input type="file" id="local" name="filename" accept=".JSON" onchange="return fileValidationLocal()">

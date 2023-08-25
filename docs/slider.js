@@ -1,3 +1,4 @@
+
 let slideIndex = 1;
 
 showSlides(slideIndex);
@@ -362,9 +363,9 @@ document.getElementById('import_btn').onclick = function() {
   refresh.style = 'column';
 
 
-  document.getElementById('refresh').addEventListener('click', function (e) {
+  /*document.getElementById('refresh').addEventListener('click', function (e) {
     location.reload();
-  });
+  });*/
 
 
 } catch {
