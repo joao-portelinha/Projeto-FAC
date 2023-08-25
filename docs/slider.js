@@ -68,6 +68,7 @@ function fileValidationRemote() {
   var prev = document.getElementById('prev');
   var refazer = document.getElementById('refazer');
   var refresh = document.getElementById('refresh');
+  var upload_files_form = document.getElementById('upload_files_form');
 
   arrow_left.style.display = 'none';
   arrow_right.style.display = 'none';
@@ -75,6 +76,7 @@ function fileValidationRemote() {
   prev.style.display = 'none';
   refazer.style.display = 'none';
   refresh.style.display = 'none';
+  upload_files_form.style.display = 'none'
     
   /* LOCAL */
 
