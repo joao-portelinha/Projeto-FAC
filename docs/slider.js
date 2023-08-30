@@ -1,4 +1,3 @@
-
 let slideIndex = 1;
 
 showSlides(slideIndex);
@@ -68,7 +67,6 @@ function fileValidationRemote() {
   var prev = document.getElementById('prev');
   var refazer = document.getElementById('refazer');
   var refresh = document.getElementById('refresh');
-  var upload_files_form = document.getElementById('upload_files_form');
 
   arrow_left.style.display = 'none';
   arrow_right.style.display = 'none';
@@ -76,7 +74,6 @@ function fileValidationRemote() {
   prev.style.display = 'none';
   refazer.style.display = 'none';
   refresh.style.display = 'none';
-  upload_files_form.style.display = 'none'
     
   /* LOCAL */
 
@@ -117,6 +114,9 @@ document.getElementById('import_btn').onclick = function() {
   const pressure_chart = document.getElementById('pressure_chart');
   const temp_efect_chart = document.getElementById('temp_efect_chart');
   const temp_skin_chart = document.getElementById('temp_skin_chart');
+  const acel_x_chart = document.getElementById('acel_x_chart');
+  const acel_y_chart = document.getElementById('acel_y_chart');
+  const acel_z_chart = document.getElementById('acel_z_chart');
 
   try{
 
@@ -169,7 +169,7 @@ document.getElementById('import_btn').onclick = function() {
   
 
   document.getElementById("initialText").innerHTML = "Humidade";
-  document.getElementById("hideNr").innerHTML = "(1/5)";
+  document.getElementById("hideNr").innerHTML = "(1/6)";
   arrow_left.style.display = 'block';
   arrow_left.style = 'column';
   arrow_right.style.display = 'block';
@@ -346,6 +346,135 @@ document.getElementById('import_btn').onclick = function() {
     }
   });
 
+  new Chart(acel_x_chart, {
+    type: 'line',
+    data: {
+      labels: obj_local.tempo,
+      //labels: Array.from({ length: obj_local.humidade.length }, (_, i) => `Humidade ${i + 1}`),
+      datasets: [{
+        label: 'Local (X)',
+        data: obj_local.acel_x,
+        backgroundColor: 'transparent',
+        borderColor: '#750000',
+        borderWidth: 4
+      },
+      {
+        label: 'Remote (X)',
+        data: obj_remote.acel_x,
+        backgroundColor: 'transparent',
+        borderColor: '#D10000',
+        borderWidth: 4
+      },
+    ]
+    },
+    options: {
+      tension: 0.6,
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: 'Tempo'
+          }
+      },
+        y: {
+          display: true,
+          title: {
+            display: true,
+            text: 'Aceleração (X)',
+          }
+        }
+      }
+    }
+
+    
+  });
+
+  new Chart(acel_y_chart, {
+    type: 'line',
+    data: {
+      labels: obj_local.tempo,
+      //labels: Array.from({ length: obj_local.humidade.length }, (_, i) => `Humidade ${i + 1}`),
+      datasets: [{
+        label: 'Local (Y)',
+        data: obj_local.acel_y,
+        backgroundColor: 'transparent',
+        borderColor: '#0047AB',
+        borderWidth: 4
+      },
+      {
+        label: 'Remote (Y)',
+        data: obj_remote.acel_y,
+        backgroundColor: 'transparent',
+        borderColor: '#6495ED',
+        borderWidth: 4
+      },
+    ]
+    },
+    options: {
+      tension: 0.6,
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: 'Tempo'
+          }
+      },
+        y: {
+          display: true,
+          title: {
+            display: true,
+            text: 'Aceleração (Y)',
+          }
+        }
+      }
+    }
+
+    
+  });
+
+  new Chart(acel_z_chart, {
+    type: 'line',
+    data: {
+      labels: obj_local.tempo,
+      //labels: Array.from({ length: obj_local.humidade.length }, (_, i) => `Humidade ${i + 1}`),
+      datasets: [{
+        label: 'Local (Z)',
+        data: obj_local.acel_z,
+        backgroundColor: 'transparent',
+        borderColor: '#228B22',
+        borderWidth: 4
+      },
+      {
+        label: 'Remote (Z)',
+        data: obj_remote.acel_z,
+        backgroundColor: 'transparent',
+        borderColor: '#7CFC00',
+        borderWidth: 4
+      },
+    ]
+    },
+    options: {
+      tension: 0.6,
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: 'Tempo'
+          }
+      },
+        y: {
+          display: true,
+          title: {
+            display: true,
+            text: 'Aceleração (Z)',
+          }
+        }
+      }
+    }
+
+    
+  });
+
   var select_files = document.getElementById('select_files');
   var lbl_local = document.getElementById('lbl_local');
   var lbl_remote = document.getElementById('lbl_remote');
@@ -375,4 +504,3 @@ document.getElementById('import_btn').onclick = function() {
 }
 
 };
-

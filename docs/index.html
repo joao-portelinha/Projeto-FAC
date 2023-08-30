@@ -10,11 +10,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="module" src="app.js"></script>
 
-    <form action="welcome_get.php" id="upload_files_form" class="hidden">
-      <input type="file" id="upload_file" name="upload_file" accept=".JSON">
-      <button type="submit" id="upload_file_btn">Upload</button>
-      </form>
-
     <div class="row">
       <div class="column">
         <div class="container">
@@ -67,7 +62,7 @@
       </div>
     </div>
     
-    
+
     <div class="row">
       <div class="column2">
     <div class="slideshow-container">
@@ -82,7 +77,7 @@
         
       <div class="mySlides fade">
         <div class="numbertext"><b>Temperatura</b></div>
-        <div class="numbertext2">(2/5)</div>
+        <div class="numbertext2">(2/6)</div>
         <div class="small">
           <canvas id="temp_chart"></canvas>
         </div>
@@ -90,7 +85,7 @@
 
       <div class="mySlides fade">
         <div class="numbertext"><b>Pressão</b></div>
-        <div class="numbertext2">(3/5)</div>
+        <div class="numbertext2">(3/6)</div>
         <div class="small">
           <canvas id="pressure_chart"></canvas>
         </div>
@@ -98,7 +93,7 @@
 
       <div class="mySlides fade">
         <div class="numbertext"><b>Temperatura Efetiva</b></div>
-        <div class="numbertext2">(4/5)</div>
+        <div class="numbertext2">(4/6)</div>
         <div class="small">
           <canvas id="temp_efect_chart"></canvas>
         </div>
@@ -106,12 +101,29 @@
 
       <div class="mySlides fade">
         <div class="numbertext"><b>Temperatura na Pele</b></div>
-        <div class="numbertext2">(5/5)</div>
+        <div class="numbertext2">(5/6)</div>
         <div class="small">
           <canvas id="temp_skin_chart"></canvas>
         </div>
       </div>
 
+      <div class="mySlides fade">
+        <div class="numbertext"><b>Aceleração</b></div>
+        <div class="numbertext2">(6/6)</div>
+        <div class="chartMenu">
+          <div class='chartCard'>
+            <div class='chartBox'>
+              <canvas id="acel_x_chart"></canvas>
+            </div>
+            <div class='chartBox'>
+              <canvas id="acel_y_chart"></canvas>
+            </div>
+            <div class='chartBox'>
+          <canvas id="acel_z_chart"></canvas>
+          </div>
+        </div>
+        </div>
+      </div>
 
     </div>
   </div>

@@ -12,6 +12,23 @@ button{
   border-radius: 12px;
 }
 
+
+.chartCard{
+  width: 1000px;
+  background: rgba(255, 26, 104, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chartBox{
+  width: 1920px;
+  border-radius: 20px;
+  border: solid 2px rgba(255, 26, 104, 0.2);
+  background: white;
+}
+
+
 h3{
   padding: 0;
   font-size: 20px;
