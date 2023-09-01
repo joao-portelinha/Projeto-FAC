@@ -8,7 +8,6 @@
 <body>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!--<script type="module" src="app.js"></script>-->
 
     <div class="row">
       <div class="column">
@@ -31,20 +30,9 @@
 
         <br>
           
-
         <div class="outline">
-          <h3 id="refazer">Desenhar gráficos com outros ficheiros .JSON?</h3>
-          <button type="submit" id="refresh" onclick="window.location.href='https://joao-portelinha.github.io/Projeto-FAC/';">Refresh</button>
-          <h3 id="select_files">Selecionar ficheiros de dados .JSON</h3>
-          <label id="lbl_local" for="local">(Local)</label>
-          <input type="file" id="local" name="filename" accept=".JSON" onchange="return fileValidationLocal()">
-          <br>
-          <label id="lbl_remote" for="remote">(Remote)</label>
-          <input type="file" id="remote" name="filename" accept=".JSON"  onchange="return fileValidationRemote()">
-
-          <br><br>
-            <button class="overrideColor" type="submit" id="default_btn" onclick="window.location.href='repo.html';">Dados Default</button>
-            <button type="submit" id="import_btn">Desenhar Gráficos</button>
+            <h3>File version: ?</h3>
+            <button type="submit" id="refresh" onclick="window.location.href='https://joao-portelinha.github.io/Projeto-FAC/';">Homepage</button>
         </div>
         
       </div>
@@ -69,8 +57,8 @@
     <div class="slideshow-container">
 
       <div class="mySlides fade">
-        <div id="initialText" class="numbertext"><b></b></div>
-        <div id="hideNr" class="numbertext2"></div>
+        <div class="numbertext"><b>Humidade</b></div>
+        <div class="numbertext2">(1/6)</div>
         <div class="small">
           <canvas id="hum_chart"></canvas>
         </div>
@@ -129,7 +117,7 @@
     </div>
   </div>
   </div>
-        <script src="slider.js"></script>
+  <script src="app.js"></script>
 
 </body>
 </html>
