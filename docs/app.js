@@ -1,3 +1,5 @@
+let x = document.lastModified;
+
 let slideIndex = 1;
 
 showSlides(slideIndex);
@@ -39,15 +41,16 @@ Promise.all([
 
     //document.querySelector("#print_json").innerText = data.temperatura
 
-     const temp_chart = document.getElementById('temp_chart');
-  const hum_chart = document.getElementById('hum_chart');
-  const pressure_chart = document.getElementById('pressure_chart');
-  const temp_efect_chart = document.getElementById('temp_efect_chart');
-  const temp_skin_chart = document.getElementById('temp_skin_chart');
-  const acel_x_chart = document.getElementById('acel_x_chart');
-  const acel_y_chart = document.getElementById('acel_y_chart');
-  const acel_z_chart = document.getElementById('acel_z_chart');
-  
+    const temp_chart = document.getElementById('temp_chart');
+    const hum_chart = document.getElementById('hum_chart');
+    const pressure_chart = document.getElementById('pressure_chart');
+    const temp_efect_chart = document.getElementById('temp_efect_chart');
+    const temp_skin_chart = document.getElementById('temp_skin_chart');
+    const acel_x_chart = document.getElementById('acel_x_chart');
+    const acel_y_chart = document.getElementById('acel_y_chart');
+    const acel_z_chart = document.getElementById('acel_z_chart');
+
+    document.getElementById('last_update').innerHTML = "Última atualização: " + data[0].timestamp;
 
   new Chart(temp_chart, {
     type: 'line',
