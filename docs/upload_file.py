@@ -1,6 +1,6 @@
 from github import Github   #pip install PyGithub
 
-token = "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" #https://github.com/settings/tokens
+token = "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" #https://github.com/settings/tokens
 
 g = Github(token)
 
@@ -22,12 +22,12 @@ while contents:
         file = file_content
         all_files.append(str(file).replace('ContentFile(path="','').replace('")',''))
 
-with open('docs/asdTESTTT.txt', 'r') as file:
+with open('docs/output.json', 'r') as file:
     content = file.read()
 
 # Upload to github
 git_prefix = 'docs/'
-git_file = git_prefix + 'asdTESTTT.txt'
+git_file = git_prefix + 'output.json'
 if git_file in all_files:
     contents = repo.get_contents(git_file)
     repo.update_file(contents.path, "committing files", content, contents.sha, branch="main")
