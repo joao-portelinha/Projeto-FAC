@@ -7,9 +7,9 @@
 int proximity;
 float x, y, z;
 unsigned long previousMillis = 0;
-const long intervalSlow = 2000;   // Slow blink interval in milliseconds
-const long intervalMedium = 1300;  // Medium blink interval in milliseconds
-const long intervalFast = 700;    // Fast blink interval in milliseconds
+const long intervalSlow = 1000;   // Slow blink interval in milliseconds
+const long intervalMedium = 500;  // Medium blink interval in milliseconds
+const long intervalFast = 200;    // Fast blink interval in milliseconds
 
 int blinkSpeed = intervalSlow; // Initial blink speed
 
