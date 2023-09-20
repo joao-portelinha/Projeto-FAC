@@ -5,9 +5,9 @@ https://joao-portelinha.github.io/Projeto-FAC/
     - [x] Cada série é visualizada através do matplotlib.
     - [x] Dados gravados em ficheiro JSON que contem os campos para cada sensor e as grandezas calculadas.
     - [x] Opção de enviar o ficheiro via email.
-- [ ] Localmente apresentar numa página web os dados dos dois nanos -> crição de gráficos em **Javascript**. (usar github pages maybe)
+- [x] Localmente apresentar numa página web os dados dos dois nanos -> crição de gráficos em **Javascript**. (usar github pages maybe)
 
-- [ ] Mudar a utilidade do sensor de proximidade. Ligar o LED quando houver proximidade e imprimir ON/OFF para ser visualizado depois.
+- ~~[ ] Mudar a utilidade do sensor de proximidade. Ligar o LED quando houver proximidade e imprimir ON/OFF para ser visualizado depois.~~
 
 ## Sensores
 [Arduino Nano 33 BLE Sense](https://docs.arduino.cc/hardware/nano-33-ble-sense)  
